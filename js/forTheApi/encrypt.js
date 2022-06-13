@@ -39,7 +39,7 @@ encryptTextButton.addEventListener('click', async function(e) {
 hideAndSendButton.addEventListener('click', async function(e) {
     e.preventDefault();
     hideAndSendButton.innerText = "Sending...";
-    let keysArr = []
+    let keysArr = [];
     for(let i = 0; i < f5keys.length; i++) {
         keysArr.push(f5keys[i].value);
     }
