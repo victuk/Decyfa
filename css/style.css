@@ -1,10 +1,4 @@
-	
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("../vendor/line-awesome/css/line-awesome.min.css");
 @import url("../vendor/font-awesome/css/all.min.css");
@@ -27,8 +21,8 @@
   --bs-warning: #fe970e;
   --bs-danger: #f72b50;
   --bs-light: #fff;
-  --bs-dark: #439CDF;
-  --bs-primary-rgb: 86, 90, 207;
+  --bs-dark: #439cdf;
+  --bs-primary-rgb: 67, 156, 224 ;
   --bs-secondary-rgb: 241, 119, 50;
   --bs-success-rgb: 32, 159, 132;
   --bs-info-rgb: 39, 84, 230;
@@ -7875,7 +7869,7 @@ h6, .h6, .h6 {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Montserrat", sans-serif;
-  color: #1f2278;
+  color: #11abde;
   line-height: 1.3; }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
     color: #1f2278; }
@@ -11663,7 +11657,7 @@ label.error {
     left: 0;
     bottom: 0;
     position: absolute;
-    background-image: url(../images/main-banner/shape1.png);
+    background-image: url(../images/main-banner/);
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 100%;
@@ -11687,7 +11681,7 @@ label.error {
     .main-banner .title-ext.text-primary {
       background-image: url(../images/shap/ext-blue.png); }
     .main-banner .title-ext.text-secondary {
-      background-image: url(../images/shap/ext-orange.png); }
+      background-image: url(../images/shap/); }
   .main-banner .tag-list li {
     display: inline-block;
     margin-right: 8px;
