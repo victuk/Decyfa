@@ -12921,7 +12921,8 @@ button.back-to-top {
   border-radius: 40px;
   padding: 70px 50px 40px;
   position: relative;
-  margin-top: -150px; }
+  /* margin-top: -150px;  */
+}
   .contact-wraper .contact-form .form-group {
     margin-bottom: 30px; }
     @media only screen and (max-width: 575px) {
