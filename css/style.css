@@ -20,14 +20,14 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #565acf;
+  --bs-primary: #27B1E1;
   --bs-secondary: #f17732;
   --bs-success: #209f84;
   --bs-info: #2754e6;
   --bs-warning: #fe970e;
   --bs-danger: #f72b50;
   --bs-light: #fff;
-  --bs-dark: #1f2278;
+  --bs-dark: #439CDF;
   --bs-primary-rgb: 86, 90, 207;
   --bs-secondary-rgb: 241, 119, 50;
   --bs-success-rgb: 32, 159, 132;
@@ -184,10 +184,10 @@ sup {
   top: -.5em; }
 
 a {
-  color: #565acf;
+  color: #27B1E1;
   text-decoration: underline; }
   a:hover {
-    color: #4548a6; }
+    color: #11abde; }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
@@ -2133,31 +2133,31 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #565acf;
-  border-color: #565acf; }
+  background-color: #439CDF;
+  border-color: #fff; }
   .btn-primary:hover {
     color: #fff;
-    background-color: #494db0;
-    border-color: #4548a6; }
+    background-color: #439CDF;
+    border-color: #439CDF; }
   .btn-check:focus + .btn-primary, .btn-primary:focus {
     color: #fff;
-    background-color: #494db0;
-    border-color: #4548a6;
-    box-shadow: 0 0 0 0rem rgba(111, 115, 214, 0.5); }
+    background-color: #439CDF;
+    border-color: #439CDF;
+    box-shadow: 0 0 0 0rem rgba(67, 155, 223, 0.301); }
   .btn-check:checked + .btn-primary,
   .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #4548a6;
-    border-color: #41449b; }
+    background-color: #439CDF;
+    border-color: #439CDF; }
     .btn-check:checked + .btn-primary:focus,
     .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0rem rgba(111, 115, 214, 0.5); }
+      box-shadow: 0 0 0 0rem rgba(67, 156, 223, 0.5); }
   .btn-primary:disabled, .btn-primary.disabled {
     color: #fff;
-    background-color: #565acf;
-    border-color: #565acf; }
+    background-color: #439CDF;
+    border-color: #439CDF; }
 
 .btn-secondary {
   color: #000;
@@ -7896,11 +7896,11 @@ li {
 a {
   text-decoration: none;
   outline: none;
-  color: #565acf; }
+  color: #439CDF; }
   a:hover, a:focus, a.active {
     text-decoration: none;
     outline: none;
-    color: #565acf; }
+    color: #439CDF; }
 
 b,
 strong,
@@ -10047,7 +10047,7 @@ label.error {
     box-shadow: 0px 5px 20px 0px rgba(241, 119, 50, 0.3) !important; }
 
 .btn-primary {
-  background-color: #565acf; }
+  background-color: #439CDF; }
   .btn-primary.light {
     background-color: #e1e2f6;
     color: #565acf;
@@ -10060,7 +10060,7 @@ label.error {
   .btn-primary .btn-icon-bx {
     color: #565acf; }
   .btn-primary.shadow {
-    box-shadow: 0px 5px 20px 0px rgba(86, 90, 207, 0.3) !important; }
+    box-shadow: 0px 5px 20px 0px #439CDF !important; }
 
 .btn-success {
   background-color: #209f84; }
@@ -14104,9 +14104,9 @@ blockquote {
           border-bottom: 1px solid #eee;
           width: 100%; } }
       .menu-links .nav > li.active > a {
-        color: #f17732; }
+        color: #439CDF; }
       .menu-links .nav > li > a {
-        color: #1f2278;
+        color: #439CDF;
         font-size: 16px;
         padding: 45px 20px;
         cursor: pointer;
@@ -14433,12 +14433,12 @@ blockquote {
   left: 0;
   width: 100%; }
   .header-transparent.style-1 .menu-links .nav > li > a {
-    color: #1f2278; }
+    color: #439CDF; }
     .header-transparent.style-1 .menu-links .nav > li > a:hover {
-      color: #f17732; }
+      color: #439CDF; }
       .header-transparent.style-1 .menu-links .nav > li > a:hover i {
         transform: rotate(45deg);
-        color: #f17732; }
+        color: #439CDF; }
   .header-transparent.style-2 .menu-links .nav > li > a {
     color: #fff; }
     .header-transparent.style-2 .menu-links .nav > li > a:hover {
@@ -14509,7 +14509,7 @@ blockquote {
       .rs-nav .menu-links .menu-logo a {
         display: inline-block; }
     .rs-nav .menu-links.nav-dark {
-      background-color: #202020; }
+      background-color: #439CDF; }
     .rs-nav .menu-links.show {
       left: 0;
       -webkit-transition: all 0.8s;
