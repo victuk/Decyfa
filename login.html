@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/flash.min.css">
 	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,13 +63,13 @@
 							<div class="tab-pane fade show active" id="formLogin" role="tabpanel" aria-labelledby="formLogin">
 								<form action="#">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Username">
+										<input type="text" id="loginEmail" class="form-control" placeholder="Email">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Password">
+										<input type="password" id="loginPassword" class="form-control" placeholder="Password">
 									</div>
 									<div class="form-group">
-										<button type="button" class="btn mb-30 btn-lg btn-primary w-100">login</button>
+										<button type="button" id="loginButton" class="btn mb-30 btn-lg btn-primary w-100">login</button>
 										<a href="#formForget" data-toggle="tab">Forgot Password</a>
 									</div>
 									<div class="text-center mt-40">						
@@ -79,21 +80,18 @@
 							</div>
 							<div class="tab-pane fade" id="formRegister" role="tabpanel" aria-labelledby="formRegister">
 								<div class="tab-pane fade show active" id="register-home" role="tabpanel" aria-labelledby="register-home">
-									<form action="#">
+									<form>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
+											<input type="text" class="form-control" id="username" placeholder="Username">
 										</div>
 										<div class="form-group">
-											<input type="email" class="form-control" placeholder="Email">
+											<input type="email" class="form-control" id="email" placeholder="Email">
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Username">
-										</div>
-										<div class="form-group">
-											<input type="password" class="form-control" placeholder="Password">
+											<input type="password" class="form-control" id="password" placeholder="Password">
 										</div>	
 										<div class="form-group">
-											<button type="button" class="btn btn-primary w-100 radius-xl">Register Now</button>
+											<button type="button" class="btn btn-primary w-100 radius-xl" id="registerButton">Register Now</button>
 										</div>													
 										<div class="text-center mt-40">						
 											<p class="mt-0">Already have an account?</p>
@@ -104,15 +102,15 @@
 							</div>
 							<div class="tab-pane fade" id="formForget" role="tabpanel" aria-labelledby="formForget">
 								<div class="tab-pane fade show active" id="login-home" role="tabpanel" aria-labelledby="login-home">
-									<form action="#">
-										<div class="form-group">
+									<form>
+										<!-- <div class="form-group">
 											<input type="password" class="form-control" placeholder="Password">
-										</div>
+										</div> -->
 										<div class="form-group">
-											<input type="password" class="form-control" placeholder="New Password">
+											<input type="password" id="newPassword" class="form-control" placeholder="New Password">
 										</div>						
 										<div class="form-group">
-											<button type="button" class="btn btn-primary w-100 radius-xl">Submit</button>
+											<button type="button" id="newPasswordButton" class="btn btn-primary w-100 radius-xl">Submit</button>
 										</div>													
 										<div class="text-center mt-40">						
 											<p class="mt-0">Already have an account?</p>
@@ -136,5 +134,8 @@
 <script src="vendor/swiper/swiper.min.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/contact.js"></script>
+<script src="js/baseUrl.js"></script>
+<script src="js/flash.min.js"></script>
+<script src="js/registerLogin.js"></script>
 </body>
 </html>
