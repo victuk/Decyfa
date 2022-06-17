@@ -24,7 +24,7 @@ generateKeyButton.addEventListener('click', async function(e) {
     if(response.publicKey) {
         generateKeyButton.innerText = 'Generate Key';
         keyStatus.innerText = 'Keys generated successfully. Your public key is:';
-        publicKey.innerText = response.publicKey.slice(2, -1);
+        publicKey.value = response.publicKey.slice(2, -1);
     } else {
         generateKeyButton.innerText = 'Generate Key';
         keyStatus = 'Key generation failed.'
