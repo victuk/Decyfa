@@ -16,6 +16,7 @@ encryptTextButton.addEventListener('click', async function(e) {
     e.preventDefault();
 
     console.log(localStorage.getItem('token'));
+    
     const res = await fetch(baseUrl + 'encrypt-text', {
         method: 'POST',
         headers: {
