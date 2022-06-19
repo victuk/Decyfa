@@ -2,6 +2,7 @@ const email = document.getElementById('email');
 const keyLength = document.getElementById('keyLength');
 const keyStatus = document.getElementById('keyStatus');
 const publicKey = document.getElementById('publicKey');
+const downloadButtonTwo = document.getElementById('downloadButtonTwo');
 let generateKeyButton = document.getElementById('generateKeyButton');
 
 generateKeyButton.addEventListener('click', async function(e) {
@@ -24,7 +25,9 @@ generateKeyButton.addEventListener('click', async function(e) {
     if(response.publicKey) {
         generateKeyButton.innerText = 'Generate Key';
         keyStatus.innerText = 'Keys generated successfully. Your public key is:';
-        publicKey.value = response.publicKey.slice(2, -1);
+        publicKey.value = 'Generated Keys Successfully';
+        downloadButtonTwo.href = baseUrl + response.publicKey;
+        downloadButtonTwo.style.display = 'block';
     } else {
         generateKeyButton.innerText = 'Generate Key';
         keyStatus = 'Key generation failed.'

@@ -16,15 +16,18 @@ encryptTextButton.addEventListener('click', async function(e) {
     e.preventDefault();
 
     console.log(localStorage.getItem('token'));
+
+    const formdata = new FormData();
+
+    formdata.append('file', publicKey.files[0]);
     
     const res = await fetch(baseUrl + 'encrypt-text', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
             token: localStorage.getItem('token'),
-            text: plainText.value,
-            encryptionKey: publicKey.value
-        }
+            text: plainText.value
+        },
+        body: formdata
     });
 
     const response = await res.json();

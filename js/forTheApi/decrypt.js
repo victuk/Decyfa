@@ -8,6 +8,7 @@ const seperateImageButton = document.getElementById('seperateImage');
 // Decrypt the ciphertext
 const ciphertext = document.getElementById('ciphertext');
 const privateKey = document.getElementById('privatekey');
+const decryptedText = document.getElementById('decrypted-text');
 const decryptButton = document.getElementById('decryptButton');
 
 seperateImageButton.addEventListener('click', async function(e) {
@@ -57,18 +58,25 @@ decryptButton.addEventListener('click', async function() {
 
     // console.log(stringToSend)
 
+    const formdata = new FormData();
+
+    formdata.append('file', privateKey.files[0]);
     
-    fetch("http://localhost:8000/decrypt-text", {
+    fetch(baseUrl + "decrypt-text", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
             token: localStorage.getItem('token'),
-            ciphertext: ciphertext.value,
-            decryptionKey: privateKey.value
-        }
+            ciphertext: ciphertext.value
+        },
+        body: formdata
     }).then(res => res.json())
     .then(response => {
-        console.log(response);
+        if(response.plaintext) {
+            decryptedText.value = response.plaintext;
+        } else {
+            decryptedText.value = "An error occured";
+            console.log(response);
+        }
     });
 
     // const response = await resTwo.json();

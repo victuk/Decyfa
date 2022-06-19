@@ -227,9 +227,13 @@
 										<textarea name="message" required class="form-control" id="ciphertext" placeholder="Cyphertext"></textarea>
 									</div>
 									<div class="form-group col-md-12">
-										<textarea name="message" required class="form-control" id="privatekey" placeholder="Private Key"></textarea>
+										<label for="privatekey">Private Key</label>
+										<input name="name" type="file" id="privatekey" required class="form-control" placeholder="Private Key">
 									</div>
-									<div id="decrypted-text"></div>
+									<div class="form-group col-md-12">
+										<textarea name="message" required class="form-control" id="decrypted-text" disabled placeholder="Decrypted text"></textarea>
+									</div>
+									
 									<div class="col-lg-12">
 										<button name="submit" type="submit" id="decryptButton" class="btn w-100 btn-secondary btn-lg">Decrypt</button>
 									</div>
