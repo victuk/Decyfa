@@ -44,6 +44,7 @@ hideImage.addEventListener('click', async function(e) {
         });
     
         const response = await res.json();
+        console.log(response);
         if(response.imageLink) {
             hideImage.innerText = "Hide Image in Image";
             hiddenImageResult.src = baseUrl + response.imageLink;
@@ -53,12 +54,9 @@ hideImage.addEventListener('click', async function(e) {
             hiddenImageResult.style.width = '100%';
             hiddenImageResult.style.height = '100%';
             downloadButton.style.display = 'block';
-        } else {
-            hideImage.innerText = "Hide Image in Image";
-            alert("An error occured.");
-            console.log(response);
         }
     } catch (error) {
+        hideImage.innerText = "Hide Image in Image";
         alert("An error has occured.");
         console.log(error);
     }
@@ -82,29 +80,32 @@ revealImage.addEventListener('click', async function(e) {
 
     formDataImg.append('file', imageThree.files[0]);
 
-    const res = await fetch(baseUrl + 'reveal-hidden-image', {
-        method: 'POST',
-        headers: {
-            f5key: neededKey,
-            token: localStorage.getItem('token')
-        },
-        body: formDataImg
-    });
-
-    const response = await res.json();
-
-    if(response.imageLink) {
-    revealImage.innerText = "Reveal Hidden Image";
-        hiddenImageResultTwo.src = baseUrl + response.imageLink;
-        downloadButtonTwo.href = baseUrl + response.imageLink;
-        downloadButtonTwo.download = response.imageLink.slice(7);
-        hiddenImageResultTwo.alt = 'Hidden Image';
-        hiddenImageResultTwo.style.width = '100%';
-        hiddenImageResultTwo.style.height = '100%';
-        downloadButtonTwo.style.display = 'block';
-    } else {
+    try {
+        const res = await fetch(baseUrl + 'reveal-hidden-image', {
+            method: 'POST',
+            headers: {
+                f5key: neededKey,
+                token: localStorage.getItem('token')
+            },
+            body: formDataImg
+        });
+    
+        const response = await res.json();
+    
+        if(response.imageLink) {
         revealImage.innerText = "Reveal Hidden Image";
-        alert('An error occured.');
-        console.log(response);
+            hiddenImageResultTwo.src = baseUrl + response.imageLink;
+            downloadButtonTwo.href = baseUrl + response.imageLink;
+            downloadButtonTwo.download = response.imageLink.slice(7);
+            hiddenImageResultTwo.alt = 'Hidden Image';
+            hiddenImageResultTwo.style.width = '100%';
+            hiddenImageResultTwo.style.height = '100%';
+            downloadButtonTwo.style.display = 'block';
+        }
+    } catch (error) {
+        revealImage.innerText = "Reveal Hidden Image";
+            alert('An error occured (F5 Keys don\'t match).');
+            console.log(error);
     }
+    
 });

@@ -20,8 +20,9 @@ encryptTextButton.addEventListener('click', async function(e) {
     const formdata = new FormData();
 
     formdata.append('file', publicKey.files[0]);
-    
-    const res = await fetch(baseUrl + 'encrypt-text', {
+
+    try {
+      const res = await fetch(baseUrl + 'encrypt-text', {
         method: 'POST',
         headers: {
             token: localStorage.getItem('token'),
@@ -35,6 +36,12 @@ encryptTextButton.addEventListener('click', async function(e) {
     if(response.ciphertext) {
         cyphertext.innerText = response.ciphertext;
     }
+    } catch (error) {
+      alert("An error has occured.");
+      console.log(error);
+    }
+    
+    
 });
 
 hideAndSendButton.addEventListener("click", async function (e) {
@@ -51,36 +58,29 @@ hideAndSendButton.addEventListener("click", async function (e) {
 
   formdata.append("file", image.files[0]);
 
-  const res = await fetch(baseUrl + "hide-text-in-image", {
-    method: "POST",
-    headers: {
-      token: localStorage.getItem("token"),
-      f5key: neededKey,
-      textToHide: cyphertextToHide.value,
-      email: email.value,
-    },
-    body: formdata,
-  });
-
-  const response = await res.json();
-
-  if (response.status) {
-    hideAndSendButton.innerText = "Hide cyphertext in image and send";
-    showStatus.innerText = "Successful";
-  } else {
+  try {
+    const res = await fetch(baseUrl + "hide-text-in-image", {
+      method: "POST",
+      headers: {
+        token: localStorage.getItem("token"),
+        f5key: neededKey,
+        textToHide: cyphertextToHide.value,
+        email: email.value,
+      },
+      body: formdata,
+    });
+  
+    const response = await res.json();
+  
+    if (response.status) {
+      hideAndSendButton.innerText = "Hide cyphertext in image and send";
+      showStatus.innerText = "Successful";
+    }
+  } catch (error) {
     hideAndSendButton.innerText = "Hide cyphertext in image and send";
     showStatus.innerText = "An error has occured";
   }
+
+  
 });
 
-/* '-----BEGIN RSA PUBLIC KEY-----
-MIGJAoGBAJXX2rrqNHRxwxdO3Uauih1HgTcXq6F3xr/SpDmgPyWnik5sLU+BWUke
-f9DPMm3+dKY7UDdJO8JSexYYLv98vaJvFKJqSDoOzpscF2nlCpc2SW1xv2ZwpGTm
-VBw/QEKwCMGXOZi0FaxeD7t5DDYwoXSZy+SLmvEhjt8UNp7Hh6uBAgMBAAE=
------END RSA PUBLIC KEY-----' */
-
-/*
-Encrypted text
-
-HbdhSvQQLpqMivsY0LTcHNrGGX-eGtRfAhV8VnjcnMQJ8TpuCPA870jxLukYEvI5ghUotr4wyEaonNVwhpHyzCGVKpOz6unr6r6-X9gxPQulssdXt_0LEGDEQZ74WQ-kaXE3uvtgcU-RdbTBZ-Jl055AiuTHKc2r-JvDgqEEx3o=
-*/
