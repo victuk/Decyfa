@@ -13,6 +13,7 @@ const newPasswordButton = document.getElementById('newPasswordButton');
 
 registerButton.addEventListener('click', async function(e) {
     e.preventDefault();
+    registerButton.innerText = 'Loading...'
     const res = await fetch(baseUrl + 'register', {
         method: 'POST',
         headers: {
@@ -27,6 +28,10 @@ registerButton.addEventListener('click', async function(e) {
 
     response = await res.json();
     console.log(response);
+    if(response.status) {
+        registerButton.innerText = 'Register';
+        window.FlashMessage.success('Registration Successful');
+    }
 
 });
 
