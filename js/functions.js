@@ -306,49 +306,49 @@
 		}
 		
 		var manageSkillBars = function(){
-		// 	if(jQuery('.skillbar').length > 0)
-		// 	{
-		// 		$('.skillbar').appear();
-		// 		$('.skillbar').skillBars({
-		// 			from: 0,
-		// 			speed: 4000,
-		// 			interval: 100,
-		// 			decimals: 0
-		// 		});
-		// 		jQuery(document.body).on('appear', '.skillbar', function (e) {
-		// 			// this code is executed for each appeared element
-		// 			if (!$(this).hasClass('appear')) {
-		// 				$(this).addClass('appear');
-		// 				$(this).find('.skillbar-bar').css("width", "0%");
-		// 				$(this).skillBars({
-		// 					from: 0,
-		// 					speed: 4000,
-		// 					interval: 100,
-		// 					decimals: 0
-		// 				});
-		// 			}
-		// 		});
-		// 	}
+			if(jQuery('.skillbar').length > 0)
+			{
+				$('.skillbar').appear();
+				$('.skillbar').skillBars({
+					from: 0,
+					speed: 4000,
+					interval: 100,
+					decimals: 0
+				});
+				jQuery(document.body).on('appear', '.skillbar', function (e) {
+					// this code is executed for each appeared element
+					if (!$(this).hasClass('appear')) {
+						$(this).addClass('appear');
+						$(this).find('.skillbar-bar').css("width", "0%");
+						$(this).skillBars({
+							from: 0,
+							speed: 4000,
+							interval: 100,
+							decimals: 0
+						});
+					}
+				});
+			}
 			
-		// }
+		}
 		
-		// var codeSecurity = function() {
-		// 	document.onkeydown = function(e) {
-		// 		if (e.keyCode === 123 || (e.ctrlKey && 
-		// 			(e.keyCode === 67 || 
-		// 			 e.keyCode === 115 ||
-		// 			 e.keyCode === 99 ||
-		// 			 e.keyCode === 85 || 
-		// 			 e.keyCode === 117))) {
-		// 			return false;
-		// 		} else {
-		// 			return true;
-		// 		}
-		// 	};
+		var codeSecurity = function() {
+			document.onkeydown = function(e) {
+				if (e.keyCode === 123 || (e.ctrlKey && 
+					(e.keyCode === 67 || 
+					 e.keyCode === 115 ||
+					 e.keyCode === 99 ||
+					 e.keyCode === 85 || 
+					 e.keyCode === 117))) {
+					return false;
+				} else {
+					return true;
+				}
+			};
 			
-			// document.addEventListener("contextmenu", function(e){
-			//   e.preventDefault();
-			// }, false);
+			document.addEventListener("contextmenu", function(e){
+			  e.preventDefault();
+			}, false);
 			
 			$(document).keypress("u",function(e) {
 			  if(e.ctrlKey){return false;}
@@ -374,7 +374,7 @@
 				setStylishScroll();
 				manageLeftSideMenu();
 				// codeSecurity();
-				// manageSkillBars();
+				manageSkillBars();
 				miscellaneousThemeWork();
 			},
 			

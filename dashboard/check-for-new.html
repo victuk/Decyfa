@@ -156,12 +156,12 @@
 			<div class="page-banner banner-lg contact-banner" style="background-image:url(images/banner/img1.jpg);">
 				<div class="container">
 					<div class="page-banner-entry text-center">
-						<h1>Encrypt and Send image with hidden ciphertext</h1>
+						<h1>Hide image in image/reveal hidden image</h1>
 						<!-- Breadcrumb row -->
 						<nav aria-label="breadcrumb" class="breadcrumb-row">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Encrypt</li>
+								<li class="breadcrumb-item active" aria-current="page">Hide/Reveal Image</li>
 							</ul>
 						</nav>
 					</div>
@@ -180,71 +180,31 @@
 				<div class="contact-wraper">
 					<div class="row">
 						<div class="col-lg-6 mb-30">
-							<h2>Step 1 (Encrypt a text)</h2>
-							<form class="form-wraper contact-form ajax-form">
-								<!-- <div class="ajax-message"></div> -->
-								<div class="row">
-									<div class="form-group col-md-12">
-										<textarea name="message" required class="form-control" id="plaintext" placeholder="Plain text"></textarea>
-									</div>
-									<div class="form-group col-md-12">
-										<label for="publicKey">Public Key</label>
-										<input name="publicKey" type="file" id="publicKey" required class="form-control">
-									</div>
-									<div class="form-group col-md-12">
-										<textarea name="message" disabled class="form-control" id="encrypted-text" placeholder="A cyphertext will appear here once you encryt a plaintext"></textarea>
-									</div>
-									
-									<div class="col-lg-12">
-										<button id="encryptTextButton" class="btn w-100 btn-secondary btn-lg">Encrypt text</button>
-									</div>
-								</div>
-							</form>
+							<h2>Show new keys</h2>
+							<div class="row" id="ShowKeys">
+								
+							</div>
 						</div>
 						<div class="col-lg-6 mb-30">
-							<h2>Step 2 (Hide text in image)</h2>
-							<form class="form-wraper contact-form ajax-form">
-								<!-- <div class="ajax-message"></div> -->
-								<div class="row">
-									<div class="form-group col-md-12">
-										<textarea name="message" required id="ciphertext-to-hide" class="form-control" placeholder="Ciphertext"></textarea>
-									</div>
+							<h2>Download images</h2>
+							<div class="row" id="ShowImages">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-									<label for="steg-key">F5 key</label>
-									<div class="form-group col-md-4">
-										<input name="steg-key1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control f5keys" >
-									</div>
-									<div class="form-group col-md-4">
-										<input name="steg-key2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control f5keys">
-									</div>
-									<div class="form-group col-md-4">
-										<input name="steg-key3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control f5keys">
-									</div>
-									<div class="form-group col-md-4">
-										<input name="steg-key4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control f5keys">
-									</div>
-									<div class="form-group col-md-4">
-										<input name="steg-key5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control f5keys">
-									</div>
-									<div class="form-group col-md-4">
-										<input name="steg-key6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control f5keys">
-									</div>
-
-									<div class="form-group col-md-12">
-										<input name="email" type="text" required class="form-control" id="email" placeholder="Email">
-									</div>
-
-									<div class="form-group col-md-12">
-										<input type="file" required class="form-control" id="image" placeholder="Picture">
-									</div>
-
-									<div id="showStatus"></div>
-									
-									<div class="col-lg-12">
-										<button name="submit" type="submit" value="Hide" id="hideImageAndSend" class="btn w-100 btn-secondary btn-lg">Hide cyphertext in image and send</button>
-									</div>
-								</div>
-							</form>
+		<section class="p-5">
+			<div class="container">
+				<div class="contact-wraper">
+					<div class="row">
+						<div class="col-lg-6 mb-30">
+							<h2>F5 keys</h2>
+							<div class="row" id="showF5keys">
+								
+							</div>
 						</div>
 					</div>
 				</div>
@@ -254,7 +214,7 @@
 	</div>
 	
 	<!-- Footer ==== -->
-	<footer class="footer" style="background-image:url(images/background/footer.jpg);">
+	<footer class="footer" style="background-image:url(../images/background/footer.jpg);">
 		<!-- Footer Top -->
 		<div class="footer-top">
 			<div class="container">
@@ -262,7 +222,7 @@
 					<div class="col-xl-3 col-lg-3 col-md-6">
 						<div class="widget widget_info">
 							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt=""></a>
+								<a href="index.html"><img src="../images/logo.png" alt=""></a>
 							</div>
 							<div class="ft-contact">
 								<p>Lorem ipsum is dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et.</p>
@@ -314,10 +274,10 @@
 							</form>
 							<div class="footer-social-link">
 								<ul>
-									<li><a target="_blank" href="https://www.facebook.com/"><img src="images/social/facebook.png" alt=""/></a></li>
-									<li><a target="_blank" href="https://twitter.com/"><img src="images/social/twitter.png" alt=""/></a></li>
-									<li><a target="_blank" href="https://www.instagram.com/"><img src="images/social/instagram.png" alt=""/></a></li>
-									<li><a target="_blank" href="https://www.linkedin.com/"><img src="images/social/linkedin.png" alt=""/></a></li>
+									<li><a target="_blank" href="https://www.facebook.com/"><img src="../images/social/facebook.png" alt=""/></a></li>
+									<li><a target="_blank" href="https://twitter.com/"><img src="../images/social/twitter.png" alt=""/></a></li>
+									<li><a target="_blank" href="https://www.instagram.com/"><img src="../images/social/instagram.png" alt=""/></a></li>
+									<li><a target="_blank" href="https://www.linkedin.com/"><img src="../images/social/linkedin.png" alt=""/></a></li>
 								</ul>
 							</div>
 						</div>
@@ -336,17 +296,17 @@
             </div>
 		</div>
 		<!-- footer-shape -->
-		<img class="pt-img1 animate-wave" src="images/shap/wave-blue.png" alt="">
-		<img class="pt-img2 animate1" src="images/shap/circle-dots.png" alt="">
-		<img class="pt-img3 animate-rotate" src="images/shap/plus-blue.png" alt="">
-		<img class="pt-img4 animate-wave" src="images/shap/wave-blue.png" alt="">
+		<img class="pt-img1 animate-wave" src="../images/shap/wave-blue.png" alt="">
+		<img class="pt-img2 animate1" src="../images/shap/circle-dots.png" alt="">
+		<img class="pt-img3 animate-rotate" src="../images/shap/plus-blue.png" alt="">
+		<img class="pt-img4 animate-wave" src="../images/shap/wave-blue.png" alt="">
 	</footer>
     <!-- Footer END ==== -->
 	<button class="back-to-top fa fa-chevron-up"></button>
 </div>
 <!-- JAVASCRIPT FILES ========================================= -->
 <script src="../js/baseUrl.js"></script>
-<script src="../js/forTheApi/encrypt.js"></script>
+<script src="../js/forTheApi/check-for-new.js"></script>
 <script src="../js/jquery.min.js"></script>
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../vendor/bootstrap-select/js/bootstrap-select.min.js"></script>

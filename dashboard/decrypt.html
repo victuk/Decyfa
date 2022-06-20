@@ -190,22 +190,22 @@
 
 									<label for="">F5 key</label>
 									<div class="form-group col-md-4">
-										<input name="steg-key" type="text" required class="form-control stegkey">
+										<input name="steg-key" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control stegkey">
 									</div>
 									<div class="form-group col-md-4">
-										<input name="steg-key" type="text" required class="form-control stegkey">
+										<input name="steg-key" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control stegkey">
 									</div>
 									<div class="form-group col-md-4">
-										<input name="steg-key" type="text" required class="form-control stegkey">
+										<input name="steg-key" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control stegkey">
 									</div>
 									<div class="form-group col-md-4">
-										<input name="steg-key" type="text" required class="form-control stegkey">
+										<input name="steg-key" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control stegkey">
 									</div>
 									<div class="form-group col-md-4">
-										<input name="steg-key" type="text" required class="form-control stegkey">
+										<input name="steg-key" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control stegkey">
 									</div>
 									<div class="form-group col-md-4">
-										<input name="steg-key" type="text" required class="form-control stegkey">
+										<input name="steg-key" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" required class="form-control stegkey">
 									</div>
 
 									<div class="form-group col-md-12">
@@ -220,21 +220,25 @@
 						</div>
 						<div class="col-lg-6 mb-30">
 							<h2>Step 2: Decrypt the text</h2>
-							<form class="form-wraper contact-form ajax-form">
+							<div class="form-wraper contact-form ajax-form">
 								<!-- <div class="ajax-message"></div> -->
 								<div class="row">
 									<div class="form-group col-md-12">
 										<textarea name="message" required class="form-control" id="ciphertext" placeholder="Cyphertext"></textarea>
 									</div>
 									<div class="form-group col-md-12">
-										<textarea name="message" required class="form-control" id="privatekey" placeholder="PrivteKey"></textarea>
+										<label for="privatekey">Private Key</label>
+										<input name="name" type="file" id="privatekey" required class="form-control" placeholder="Private Key">
 									</div>
-									<div id="decrypted-text"></div>
+									<div class="form-group col-md-12">
+										<textarea name="message" required class="form-control" id="decrypted-text" disabled placeholder="Decrypted text"></textarea>
+									</div>
+									
 									<div class="col-lg-12">
 										<button name="submit" type="submit" id="decryptButton" class="btn w-100 btn-secondary btn-lg">Decrypt</button>
 									</div>
 								</div>
-							</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -379,13 +383,12 @@
 	<button class="back-to-top fa fa-chevron-up"></button>
 </div>
 <!-- JAVASCRIPT FILES ========================================= -->
-<script src="../js/jquery.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
-<script src="../vendor/magnific-popup/jquery.magnific-popup.js"></script>
-<!-- <script src="../vendor/swiper/swiper.min.js"></script> -->
-<script src="../js/functions.js"></script>
 <script src="../js/baseUrl.js"></script>
+<!-- <script src="../js"></script> -->
 <script src="../js/forTheApi/decrypt.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../vendor/magnific-popup/jquery.magnific-popup.js"></script>
+<script src="../js/functions.js"></script>
+
 </body>
 </html>

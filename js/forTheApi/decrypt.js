@@ -8,6 +8,7 @@ const seperateImageButton = document.getElementById('seperateImage');
 // Decrypt the ciphertext
 const ciphertext = document.getElementById('ciphertext');
 const privateKey = document.getElementById('privatekey');
+const decryptedText = document.getElementById('decrypted-text');
 const decryptButton = document.getElementById('decryptButton');
 
 seperateImageButton.addEventListener('click', async function(e) {
@@ -23,39 +24,52 @@ seperateImageButton.addEventListener('click', async function(e) {
 
     formdata.append('file', imageFile.files[0]);
 
-    const res = await fetch(baseUrl + "seperate-image", {
-        method: 'POST',
-        headers: {
-            token: localStorage.getItem('token'),
-            f5key: neededKey
-        },
-        body: formdata
-    });
-
-    const response = await res.json();
-    console.log(response);
-    if(response.ciphertext) {
-        theCyphertext.innerText = response.ciphertext;
+    try {
+        const res = await fetch(baseUrl + "seperate-image", {
+            method: 'POST',
+            headers: {
+                token: localStorage.getItem('token'),
+                f5key: neededKey
+            },
+            body: formdata
+        });
+    
+        const response = await res.json();
+        console.log(response);
+        if(response.ciphertext) {
+            theCyphertext.innerText = response.ciphertext;
+        } 
+    } catch (error) {
+        alert("An error occured.");
+        console.log(error);
     }
 });
 
-decryptButton.addEventListener('click', async function(e) {
-    e.preventDefault();
-    let res = await fetch(baseUrl + "decrypt-text", {
-        mode: "no-cors",
-        method: 'POST',
+
+decryptButton.addEventListener('click', async function() {
+
+    const formdata = new FormData();
+
+    formdata.append('file', privateKey.files[0]);
+    
+    fetch(baseUrl + "decrypt-text", {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json',
-            decryptionKey: privateKey.value,
-            token: localStorage.getItem('token')
-        },
-        body: JSON.stringify({
+            token: localStorage.getItem('token'),
             ciphertext: ciphertext.value
-        })
+        },
+        body: formdata
+    }).then(res => res.json())
+    .then(response => {
+        if(response.plaintext) {
+            decryptedText.value = response.plaintext;
+        } else {
+            decryptedText.value = "An error occured";
+            console.log(response);
+        }
+    }).catch(error => {
+        alert("an error occured.");
+        console.log(error);
     });
-
-    const response = await res.json();
-
-    console.log(response);
 });
 

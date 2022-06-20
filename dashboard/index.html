@@ -156,12 +156,12 @@
 			<div class="page-banner banner-lg contact-banner" style="background-image:url(../images/banner/img1.jpg);">
 				<div class="container">
 					<div class="page-banner-entry text-center">
-						<h1>Contact Us</h1>
+						<h1>Dashboard</h1>
 						<!-- Breadcrumb row -->
 						<nav aria-label="breadcrumb" class="breadcrumb-row">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+								<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
 							</ul>
 						</nav>
 					</div>
@@ -182,7 +182,7 @@
 					<div class="col-lg-4 col-md-6 mb-30">
 						<div class="feature-container feature-bx4 feature4">
 							<div class="icon-md feature-icon">
-								<!-- <img src="../images/icon/icon1.png" alt=""> -->
+								<img src="../images/settings-gears.png" alt="">
 							</div>
 							<div class="icon-content">
 								<a href="generate-key.html"><h5 class="ttr-title">Generate Keys</h5></a>
@@ -194,7 +194,7 @@
 					<div class="col-lg-4 col-md-6 mb-30">
 						<div class="feature-container feature-bx4 feature3">
 							<div class="icon-md feature-icon">
-								<!-- <img src="../images/icon/icon3.png" alt=""> -->
+								<img src="../images/forward.png" alt="">
 							</div>
 							<div class="icon-content">
 								<a href="encrypt.html"><h5 class="ttr-title">Send</h5></a>
@@ -205,11 +205,45 @@
 					<div class="col-lg-4 col-md-6 mb-30">
 						<div class="feature-container feature-bx4 feature2">
 							<div class="icon-md feature-icon">
-								<!-- <img src="../images/icon/icon2.png" alt=""> -->
+								<img src="../images/download-circular-button.png" alt="">
 							</div>
 							<div class="icon-content">
 								<a href="decrypt.html"><h5 class="ttr-title">Receive</h5></a>
 								<p>Here, you seperate the image from the cyphertext, then decrypt the cyphertext.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-30">
+						<div class="feature-container feature-bx4 feature3">
+							<div class="icon-md feature-icon">
+								<img src="../images/forward.png" alt="">
+							</div>
+							<div class="icon-content">
+								<a href="hide-and-seperate.html"><h5 class="ttr-title">Hide Image In Image/ Reveal Hidden Image</h5></a>
+								<p>You can hide an image inside another image. Reveal Image Hidden inside an image</h5></a>
+									<p>Seperate an image from its hidden image, then show the hidden image it.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-30">
+						<div class="feature-container feature-bx4 feature2">
+							<div class="icon-md feature-icon">
+								<img src="../images/download-circular-button.png" alt="">
+							</div>
+							<div class="icon-content">
+								<a href="check-for-new.html"><h5 class="ttr-title">Check For new Details</h5></a>
+								<p>Check if there are any new gener</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-30">
+						<div class="feature-container feature-bx4 feature4">
+							<div class="icon-md feature-icon">
+								<img src="../images/turn-off.png" alt="">
+							</div>
+							<div class="icon-content">
+								<button id="log-out" style="border: none; background: transparent;"><h5 class="ttr-title">Log Out</h5></button>
+								<p>Log Out from this account</p>
 							</div>
 						</div>
 					</div>
@@ -219,6 +253,15 @@
 		
 	</div>
 	
+	<script>
+		const logOutButton = document.getElementById('log-out');
+		
+		logOutButton.addEventListener('click', function() {
+			localStorage.removeItem('token');
+			location.assign('/index.html');
+		});
+	</script>
+
 	<!-- Footer ==== -->
 	<footer class="footer" style="background-image:url(../images/background/footer.jpg);">
 		<!-- Footer Top -->
