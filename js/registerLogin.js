@@ -14,25 +14,32 @@ const newPasswordButton = document.getElementById('newPasswordButton');
 registerButton.addEventListener('click', async function(e) {
     e.preventDefault();
     registerButton.innerText = 'Loading...'
-    const res = await fetch(baseUrl + 'register', {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            username: username.value,
-            email: email.value,
-            password: password.value
-        })
-    });
-
-    response = await res.json();
-    console.log(response);
-    if(response.status) {
+    try {
+        const res = await fetch(baseUrl + 'register', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username: username.value,
+                email: email.value,
+                password: password.value
+            })
+        });
+    
+        response = await res.json();
+        console.log(response);
+        if(response.status) {
+            registerButton.innerText = 'Register';
+            window.FlashMessage.success('Registration Successful');
+        } else {
+            registerButton.innerText = 'Register';
+        } 
+    } catch (error) {
         registerButton.innerText = 'Register';
-        window.FlashMessage.success('Registration Successful');
+        window.FlashMessage.info('Registration Successful');
+        console.log(error);
     }
-
 });
 
 loginButton.addEventListener('click', async function(e) {
