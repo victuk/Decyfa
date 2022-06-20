@@ -7990,7 +7990,7 @@ strong,
         -ms-animation: load-rotate-one 1.15s linear infinite;
         -webkit-animation: load-rotate-one 1.15s linear infinite;
         -moz-animation: load-rotate-one 1.15s linear infinite;
-        border-bottom: 5px solid #565acf; }
+        border-bottom: 5px solid #11abde; }
       #loading-icon-bx .loading-inner div.load-two {
         right: 0%;
         top: 0%;
@@ -7999,7 +7999,7 @@ strong,
         -ms-animation: load-rotate-two 1.15s linear infinite;
         -webkit-animation: load-rotate-two 1.15s linear infinite;
         -moz-animation: load-rotate-two 1.15s linear infinite;
-        border-right: 5px solid #565acf; }
+        border-right: 5px solid #11abde; }
       #loading-icon-bx .loading-inner div.load-three {
         right: 0%;
         bottom: 0%;
@@ -8008,7 +8008,7 @@ strong,
         -ms-animation: load-rotate-three 1.15s linear infinite;
         -webkit-animation: load-rotate-three 1.15s linear infinite;
         -moz-animation: load-rotate-three 1.15s linear infinite;
-        border-top: 5px solid #565acf; }
+        border-top: 5px solid #11abde; }
 
 @keyframes load-rotate-one {
   0% {
@@ -12809,7 +12809,7 @@ button.back-to-top {
   bottom: 15px;
   box-shadow: 0px 10px 30px 0px rgba(31, 34, 120, 0.1);
   color: #fff;
-  background-color: #565acf;
+  background-color: #11abde;
   border-radius: 8px;
   cursor: pointer;
   display: none;
@@ -15361,7 +15361,7 @@ footer {
 
 .footer:after {
   content: "";
-  background-image: url(../images/background/footer-shape.png);
+  /* background-image: url(../images/background/footer-shape.png); */
   position: absolute;
   top: 0;
   left: 0;
