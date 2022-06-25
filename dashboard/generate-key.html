@@ -42,6 +42,7 @@
     <link rel="stylesheet" type="text/css" href="../vendor/bootstrap-select/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="../vendor/swiper/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/flash.min.css">
 	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -190,17 +191,17 @@
 										<input name="text" type="text" required class="form-control" id="keyLength" placeholder="Key Length">
 									</div>
 
-									<div class="form-group col-md-12">
+									<!-- <div class="form-group col-md-12">
 										<div id="keyStatus"></div>
 									<textarea name="message" required id="publicKey" disabled class="form-control" placeholder="Public Key"></textarea>
-									</div>
+									</div> -->
 									
 									<div class="form-group col-lg-12">
 										<button name="submit" type="submit" value="Submit" id="generateKeyButton" class="btn w-100 btn-secondary btn-lg">Generate Key</button>
 									</div>
 
 									<div class="form-group col-lg-12">
-										<a id="downloadButtonTwo" style="display: none;" target="_blank" class="btn w-100 btn-secondary btn-lg" download="publicKey.pem">Download Public Key</a>
+										<a id="downloadButtonTwo" style="display: none;" target="_blank" class="btn w-100 btn-secondary btn-lg" download="privateKey.pem">Download Private Key</a>
 									</div>
 								</div>
 							</form>
@@ -334,6 +335,7 @@
 <script src="../vendor/magnific-popup/jquery.magnific-popup.js"></script>
 <script src="../vendor/swiper/swiper.min.js"></script>
 <script src="../js/functions.js"></script>
+<script src="../js/flash.min.js"></script>
 <script src="../js/baseUrl.js"></script>
 <script src="../js/forTheApi/generate-key.js"></script>
 </body>

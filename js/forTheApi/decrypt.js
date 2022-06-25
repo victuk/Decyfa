@@ -38,9 +38,10 @@ seperateImageButton.addEventListener('click', async function(e) {
         console.log(response);
         if(response.ciphertext) {
             theCyphertext.innerText = response.ciphertext;
+            window.FlashMessage.success('Successful');
         } 
     } catch (error) {
-        alert("An error occured.");
+        window.FlashMessage.warning('An error occured.');
         console.log(error);
     }
 });
@@ -63,12 +64,14 @@ decryptButton.addEventListener('click', async function() {
     .then(response => {
         if(response.plaintext) {
             decryptedText.value = response.plaintext;
+            window.FlashMessage.success('Successful');
         } else {
             decryptedText.value = "An error occured";
+            window.FlashMessage.warning('An error occured.');
             console.log(response);
         }
     }).catch(error => {
-        alert("an error occured.");
+        window.FlashMessage.warning('An error occured.');
         console.log(error);
     });
 });
