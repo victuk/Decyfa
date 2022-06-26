@@ -59,14 +59,15 @@ loginButton.addEventListener('click', async function(e) {
         // console.log(response);
         if(!response.token) {
             console.log(response.detail);
-            window.FlashMessage.success(response.detail);
+            window.FlashMessage.warning(response.detail);
         } else {
             localStorage.setItem('token', response.token);
             location.assign('/dashboard/index.html');
         }
         
     } catch (error) {
-        console.log("Error", error);
+        window.FlashMessage.warning('An error occurred.');
+        console.log("Error:", error);
     }
     
 });
