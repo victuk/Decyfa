@@ -12667,7 +12667,7 @@ label.error {
         display: block;
         height: 40px;
         width: 40px;
-        background-color: #565acf;
+        background-color: #11abde;
         border-radius: 8px;
         -webkit-transition: all 0.5s;
         -ms-transition: all 0.5s;
@@ -12950,7 +12950,7 @@ button.back-to-top {
   .contact-info .social-media li {
     display: inline-block; }
     .contact-info .social-media li a {
-      color: #565acf;
+      color: #11abde;
       background-color: #fff; }
   .contact-info .icon-box {
     margin-right: 100px;
@@ -12999,7 +12999,7 @@ button.back-to-top {
     height: 40px;
     width: 40px;
     line-height: 40px;
-    background-color: #565acf;
+    background-color: #11abde;
     color: #fff;
     text-align: center;
     border-radius: 8px;
@@ -14346,7 +14346,7 @@ blockquote {
   .menu-links .menu-close {
     height: 40px;
     color: #fff;
-    background-color: #565acf;
+    background-color: #11abde;
     line-height: 44px;
     text-align: center;
     width: 40px;
@@ -14481,7 +14481,7 @@ blockquote {
     -ms-transition: all 0.5s;
     transition: all 0.5s;
     top: 0;
-    background-color: #171a1e;
+    background-color: #EDEDED;
     margin: 0;
     z-index: 99;
     overflow-y: scroll;
@@ -14526,9 +14526,9 @@ blockquote {
     border-color: rgba(255, 255, 255, 0.1); }
     .menu-links .nav > li a {
       font-size: 14px;
-      color: #fff; }
+      color: #040400; }
     .menu-links .nav > li:hover > a, .menu-links .nav > li.active > a {
-      color: #fff;
+      color: #030303;
       border-color: rgba(255, 255, 255, 0.1); }
     .menu-links .nav > li .mega-menu li a,
     .menu-links .nav > li .sub-menu li a {
