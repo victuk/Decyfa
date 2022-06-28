@@ -24,7 +24,7 @@ setInterval(function() {
                 
                 showKeys.innerHTML += `
             <div class="form-group col-md-12">
-                                        New Private key from ${response.private_key_links[i].sendersEmail}
+                                        New Public key from ${response.private_key_links[i].sendersEmail}
                                         <a href="${response.private_key_links[i].pkLink}" style="width: 100%;">Download</a>
                                     </div>
             `;
