@@ -31,23 +31,23 @@ setInterval(function() {
             }
         }
 
-        if(response.image_links.length == 0) {
-            showImages.innerHTML = `
-            <div class="form-group col-md-12">
-                                        No new image
-                                    </div>
-            `;
-        } else {
-            showImages.innerHTML = "";
-            for(let i = 0; i < response.image_links.length; i++) {
-                showImages.innerHTML = `
-            <div class="form-group col-md-12">
-                                        New image from ${response.image_links[i].sendersEmail}
-                                        <a href="${response.image_links[i].pkLink}" style="width: 100%;">Download</a>
-                                    </div>
-            `;
-            }
-        }
+        // if(response.image_links.length == 0) {
+        //     showImages.innerHTML = `
+        //     <div class="form-group col-md-12">
+        //                                 No new image
+        //                             </div>
+        //     `;
+        // } else {
+        //     showImages.innerHTML = "";
+        //     for(let i = 0; i < response.image_links.length; i++) {
+        //         showImages.innerHTML = `
+        //     <div class="form-group col-md-12">
+        //                                 New image from ${response.image_links[i].sendersEmail}
+        //                                 <a href="${response.image_links[i].pkLink}" style="width: 100%;">Download</a>
+        //                             </div>
+        //     `;
+        //     }
+        // }
 
         if(response.f_five_links.length == 0) {
             showF5keys.innerHTML = `
