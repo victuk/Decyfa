@@ -2,6 +2,8 @@ let showKeys = document.getElementById('ShowKeys');
 let showImages = document.getElementById('ShowImages');
 let showF5keys = document.getElementById('showF5keys');
 
+let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 
 setInterval(function() {
     fetch(baseUrl + "check-for-new", {
@@ -26,6 +28,7 @@ setInterval(function() {
             <div class="form-group col-md-12">
                                         New Public key from ${response.private_key_links[i].sendersEmail}
                                         <a href="${response.private_key_links[i].pkLink}" style="width: 100%;">Download</a>
+                                        Date: ${new Date(response.private_key_links[i].date).toString().slice(0, -37)}
                                     </div>
             `;
             }
@@ -44,6 +47,7 @@ setInterval(function() {
             <div class="form-group col-md-12">
                                         New image from ${response.image_links[i].sendersEmail}
                                         <a href="${response.image_links[i].pkLink}" style="width: 100%;">Download</a>
+                                        Date: ${new Date(response.image_links[i].date).toString().slice(0, -37)}
                                     </div>
             `;
             }
@@ -62,6 +66,7 @@ setInterval(function() {
             <div class="form-group col-md-12">
                                         New F5 key from ${response.f_five_links[i].sendersEmail}
                                         <a href="${response.f_five_links[i].pkLink}" style="width: 100%;">Download</a>
+                                        Date: ${new Date(response.f_five_links[i].date).toString().slice(0, -37)}
                                     </div>
             `;
             }
