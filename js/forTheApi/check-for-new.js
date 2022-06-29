@@ -15,7 +15,7 @@ setInterval(function() {
         if(response.private_key_links.length == 0) {
             showKeys.innerHTML = `
             <div class="form-group col-md-12">
-                                        No new private key
+            You do not have any public key(s) yet...
                                     </div>
             `;
         } else {
@@ -34,7 +34,7 @@ setInterval(function() {
         if(response.image_links.length == 0) {
             showImages.innerHTML = `
             <div class="form-group col-md-12">
-                                        No new image
+            You do not have a stego file(s) yet... 
                                     </div>
             `;
         } else {
@@ -52,7 +52,7 @@ setInterval(function() {
         if(response.f_five_links.length == 0) {
             showF5keys.innerHTML = `
             <div class="form-group col-md-12">
-                                        No new f5 key
+            You do not have any F5 key(s) yet...
                                     </div>
             `;
         } else {
@@ -79,4 +79,4 @@ setInterval(function() {
         console.log(e);
     });
 
-}, 5000);
+}, 2000);
