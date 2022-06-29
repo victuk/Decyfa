@@ -3,6 +3,7 @@ const keyLength = document.getElementById('keyLength');
 // const keyStatus = document.getElementById('keyStatus');
 // const publicKey = document.getElementById('publicKey');
 const downloadButtonTwo = document.getElementById('downloadButtonTwo');
+const downloadButtonThree = document.getElementById('downloadButtonThree');
 let generateKeyButton = document.getElementById('generateKeyButton');
 
 generateKeyButton.addEventListener('click', async function(e) {
@@ -37,6 +38,8 @@ generateKeyButton.addEventListener('click', async function(e) {
             }});
             downloadButtonTwo.href = baseUrl + response.privateKey;
             downloadButtonTwo.style.display = 'block';
+            downloadButtonThree.href= baseUrl + response.publicKey;
+            downloadButtonThree.style.display = 'block';
         } else {
             generateKeyButton.innerText = 'Generate Key';
             // keyStatus.innerText = 'Key generation failed.'
